@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Concrete <!--bu html sayfasına concrete sınıfını dahil ettim-->
+@model List<Category>
+<!--model verileri listelemek için kullanılan bileşen-->
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+    </tr>
+    <!--burada C# kullanabilmek için et sembolü  koymak razor syntax olarak adlandırılıyor-->
+    <!-- değişkenin türü// bu değişkenin ismi//in yani içinden//değerlerin alınacağı dizinin ismi -->
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td><!--item nokta koyunca properyler listelenmeye başladı categoryıd ile ıdler listelenmeye başladı-->
+            <td>@item.CategoryName</td><!--item nokta koyunca properyler listelenmeye başladı categoryad ile adler listelenmeye başladı-->
+            <td>@item.CategoryDescription</td><!--item nokta koyunca properyler listelenmeye başladı CategoryDescription ile açıklamalar listelenmeye başladı-->
+            <td>@item.CategoryStatus</td><!--item nokta koyunca properyler listelenmeye başladı CategoryStatus ile statusler listelenmeye başladı-->
+        </tr>
+     }
+</table>
+<a href="/Category/AddCategory" class="btn btn-info">Yeni Kategori</a><!--category klasöründeki addcategory sayfasına git butona basınca butonun ismi yeni kategori ve btn-info boostrap den-->

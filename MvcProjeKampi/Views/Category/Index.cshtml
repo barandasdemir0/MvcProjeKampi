@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" /> <!--boostrap min sayfasını sürükleyip bırakıyoruz buraya-->
+
+<h3> MVC KAMP TABLO ÖRNEĞİ - Kategori</h3>
+<br />
+<table class="table table-hover">
+    <!-- table-bordered kenarlıklı bir yapı sunar boostrapde table-hover ise tıklamalı üzerine geldiğimizde belli olur -->
+    <tr>
+        <th>ID</th>
+        <th> Adı</th>
+        <th>açıklama</th>
+        <th>Durum</th>
+        <th>Güncelle</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>eğitim</td>
+        <td>açıklama yaptık</td>
+        <td>true</td>
+        <td><button class="btn btn-success">güncelle</button></td><!--yeşil buton çıktı-->
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Spor</td>
+        <td>açıklama yaptık</td>
+        <td>true</td>
+        <td><button class="btn btn-success">güncelle</button></td><!--yeşil buton çıktı-->
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Kitap</td>
+        <td>açıklama yaptık</td>
+        <td>true</td>
+        <td><button class="btn btn-success">güncelle</button></td><!--yeşil buton çıktı-->
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Sinema</td>
+        <td>açıklama bekleniyor</td>
+        <td>true</td>
+        <td><button class="btn btn-success">güncelle</button></td><!--yeşil buton çıktı-->
+    </tr>
+
+</table>
+
+<button class="btn btn-info">Yeni Kategori</button><!--btn btn- yazınca herhangi birini dene butona şıklık veriyor mavi butın-->
+<button class="btn btn-warning">Kategori Listesi</button><!--örnekteki gibi sarı buton-->
+<button class="btn btn-danger">Kategori Açıklamaları</button><!--örnekteki gibi kırmızı buton-->

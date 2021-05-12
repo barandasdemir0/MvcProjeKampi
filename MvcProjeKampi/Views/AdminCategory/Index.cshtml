@@ -1,0 +1,35 @@
+﻿@using EntityLayer.Concrete <!--bu html sayfasına concrete sınıfını dahil ettim-->
+@model List<Category>
+<!--model verileri listelemek için kullanılan bileşen-->
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Listeleme Sayfası</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Başlıklar</th>
+    </tr>
+    <!--burada C# kullanabilmek için et sembolü  koymak razor syntax olarak adlandırılıyor-->
+    <!-- değişkenin türü// bu değişkenin ismi//in yani içinden//değerlerin alınacağı dizinin ismi -->
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.CategoryID</th><!--item nokta koyunca properyler listelenmeye başladı categoryıd ile ıdler listelenmeye başladı-->
+            <td>@item.CategoryName</td><!--item nokta koyunca properyler listelenmeye başladı categoryad ile adler listelenmeye başladı-->
+            <td>@item.CategoryDescription</td><!--item nokta koyunca properyler listelenmeye başladı CategoryDescription ile açıklamalar listelenmeye başladı-->
+            <td><a href="/AdminCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td><!--sen admin category içinde delete categorye gideceksin yalnız giderken bir de id götür hangi id category id-->
+            <td><a href="/AdminCategory/EditCategory/@item.CategoryID" class="btn btn-warning">Güncelle</a></td>><!--sen admin category içinde edit categorye gideceksin yalnız giderken bir de id götür hangi id category id-->
+            <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+        </tr>
+    }
+</table>
+<a href="/AdminCategory/AddCategory" class="btn btn-info">Yeni Kategori</a><!--category klasöründeki addcategory sayfasına git butona basınca butonun ismi yeni kategori ve btn-info boostrap den-->
+<a href="/statistics/Index" class="btn btn-dark">İstatistikler</a><!--category klasöründeki addcategory sayfasına git butona basınca butonun ismi yeni kategori ve btn-info boostrap den-->

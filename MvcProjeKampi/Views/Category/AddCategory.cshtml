@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.Category
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h1>Yeni Kategori Ekleme Sayfası</h1>
+<br />
+<!--bir başlangıç formu oluştur begin form bu demek 3 parametresi var birincisi üzerinde çalıştığım actionun ismi addcategory  üzerinde çalıştığım controllerin ismi category üçünüsü ise form metodun değeri post dedik butona tıkladığımız zaman süslü parantez içinde çalışacak-->
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Kategori Adı : ")<!--label atayıp kategori adı dedik-->
+    @Html.TextBoxFor(x => x.CategoryName)<!--textbox dedik bunun yerini categorynameden aldık -->
+    @Html.ValidationMessageFor(x => x.CategoryName)<!--hata mesajlarını yazdırmak için yazdırdık-->
+    <br />
+    <br />
+    @Html.Label("Açıklamayı Yazınız : ")
+    @Html.TextBoxFor(x => x.CategoryDescription)
+    @Html.ValidationMessageFor(x => x.CategoryDescription)<!--hata mesajlarını yazdırmak için yazdırdık-->
+    <br />
+    <br />
+    <button>Kaydet</button>
+</div>
+}
+@*
+    BU YÖNTEM KÖTÜ YÖNTEMDİR
+    
+    <form class="form-group" method="post">
+    method diyerek form tagı içerisinde yer alan ifadeler ne zaman çalıssın sayfada post işlemi olduğu zaman çalıssın demek form-group dediğimiz ise boostrap
+    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />type diyerek araçlarımızı çıkar placeholder ise pasif olan isim classda boostrapden geliyor VE EN ÖNEMLİ KISIM name vererek nereye eklettiriyoruz categoryname bakın bu taraf veritabanı ile tıpatıp olması lazım
+    <br />
+    <input type="text" placeholder="Açıklama Giriniz" name="CategoryDescription" class="form-control" />
+    açıklama aynı yukardakiyle
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+    ekleye basınca veritabanı ekledi
+    </form>*@

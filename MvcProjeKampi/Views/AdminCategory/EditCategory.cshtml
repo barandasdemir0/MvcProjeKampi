@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Category
+<!--//entitylayerden concreteden category üzerinde çalış-->
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Kategori Güncelleme Sayfası</h2>
+
+<!--bir başlangıç formu oluştur begin form bu demek 3 parametresi var birincisi üzerinde çalıştığım actionun ismi editcategory  üzerinde çalıştığım controllerin ismi admincategory üçünüsü ise form metodun değeri post dedik butona tıkladığımız zaman süslü parantez içinde çalışacak-->
+@using (Html.BeginForm("EditCategory", "AdminCategory", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Kategori ID : ")<!--label atayıp kategori adı dedik-->
+    @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })<!--textbox dedik bunun yerini CategoryIDden aldık new class form diyerek de boostrap özelliği verdik-->
+    <br />
+    @Html.Label("Kategori AD : ")<!--label atayıp kategori adı dedik-->
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })<!--textbox dedik bunun yerini categorynameden aldık new class form diyerek de boostrap özelliği verdik-->
+    <br />
+    @Html.Label("Kategori Açıklama : ")<!--label atayıp kategori adı dedik-->
+    @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })<!--textbox dedik bunun yerini CategoryDescriptionden aldık new class form diyerek de boostrap özelliği verdik-->
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</div>
+}
+
