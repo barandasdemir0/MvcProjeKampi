@@ -18,9 +18,14 @@ namespace EntityLayer.Concrete
         public string WriterSurName { get; set; }//yazar soyad
         [StringLength(100)]
         public string WriterImage { get; set; } //yazar resim
-        [StringLength(50)]
+
+        [StringLength(100)]
+        public string WriterAbout { get; set; }//yazar hakkında
+
+        //şifrelemek için burayı 200 yaptık
+        [StringLength(200)]
         public string WriterMail { get; set; }//yazar mail
-        [StringLength(20)]
+        [StringLength(200)]
         public string WriterPassword { get; set; }//yazar şifre
 
 
