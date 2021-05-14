@@ -22,7 +22,9 @@ namespace DataAccsessLayer.Concrete.Repositories
         }
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = c.Entry(p);//silinecek entity değeri buna atama yapacaz contextten c entry entry demek giriş metot içine eklenecek parametre yani p den gelen değerimiz
+            deletedEntity.State = EntityState.Deleted;//state  = durum demek deleted urum durumu şu olacak entity durumları entitiystate nokta koy sonra durumlar çıakcak deleted deyince silme metodu gelecek 
+          //  _object.Remove(p); --> böylelikle yukarısı ile burası yok 
             c.SaveChanges();
         }
         public T Get(Expression<Func<T, bool>> filter)//ırepository altında hata çıkacak birinciye basınca bunu verecek bu nedir ırepositoryde bir şey tanımladın ama burada tanımlamadın diyor
@@ -31,7 +33,9 @@ namespace DataAccsessLayer.Concrete.Repositories
         }
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = c.Entry(p); //eklenecek entity değeri buna atama yapacaz contextten c entry entry demek giriş metot içine eklenecek parametre yani p den gelen değerimiz
+            addedEntity.State = EntityState.Added;//state  = durum demek addeddurum durumu şu olacak entity durumları entitiystate nokta koy sonra durumlar çıakcak added deyince ekleme metodu gelecek 
+          //  _object.Add(p); --> böylelikle yukarısı ile burası yok oldu
             c.SaveChanges();
         }
         public List<T> List()
@@ -44,6 +48,8 @@ namespace DataAccsessLayer.Concrete.Repositories
         }
         public void Update(T p)
         {
+            var updateEntity = c.Entry(p);//güncellenecek entity değeri buna atama yapacaz contextten c entry entry demek giriş metot içine eklenecek parametre yani p den gelen değerimiz
+            updateEntity.State = EntityState.Modified;// state = durum demek güncellemedurum durumu şu olacak entity durumları entitiystate nokta koy sonra durumlar çıakcak modified deyince güncelleme metodu gelecek
             c.SaveChanges();
         }
     }
