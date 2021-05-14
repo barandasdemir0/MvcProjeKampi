@@ -9,7 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;//bu false true olması lazım
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DataAccsessLayer.Concrete.Context context)
