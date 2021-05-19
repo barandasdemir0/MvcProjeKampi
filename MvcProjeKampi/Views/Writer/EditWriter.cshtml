@@ -11,7 +11,7 @@
 {
 <div class="form-group">
     @Html.Label("Yazar ID : ")
-    @Html.TextBoxFor(x => x.WriterID ,new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
     <br />
     @Html.Label("Yazar Adı : ")
     @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
@@ -36,6 +36,10 @@
     @Html.Label("Yazar Hakkında : ")
     @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterAbout)
+    <br />
+    @Html.Label("Yazar Ünvan : ")
+    @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterTitle)
     <br />
     <button class="btn btn-success">Değişiklikleri Uygula</button>
 </div>

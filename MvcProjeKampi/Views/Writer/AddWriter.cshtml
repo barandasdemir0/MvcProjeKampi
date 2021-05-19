@@ -33,7 +33,11 @@
         @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.WriterAbout)
         <br />
-       <button class="btn btn-info">Yazarı Ekle</button>
+        @Html.Label("Yazar Ünvan : ")
+        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterTitle)
+        <br />
+        <button class="btn btn-info">Yazarı Ekle</button>
     </div>
 }
 
