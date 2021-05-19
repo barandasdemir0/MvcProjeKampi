@@ -27,6 +27,8 @@ namespace EntityLayer.Concrete
         public string WriterMail { get; set; }//yazar mail
         [StringLength(200)]
         public string WriterPassword { get; set; }//yazar şifre
+        [StringLength(50)]
+        public string WriterTitle { get; set; }//yazar başlık
 
 
         //birden fazla yazar için yorum yapacakarından bu alttaki 2 kodu yazdık
