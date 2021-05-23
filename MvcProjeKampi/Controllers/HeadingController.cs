@@ -56,5 +56,9 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAdd(p);//parametreden gelen değer
             return RedirectToAction("Index");//indexe git
         }
+        public ActionResult ContentByHeading()//içerikleri getir neye göre başlığa göre
+        {
+            return View();
+        }
     }
 }

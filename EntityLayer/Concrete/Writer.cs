@@ -30,6 +30,8 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string WriterTitle { get; set; }//yazar başlık
 
+        public bool WriterStatus { get; set; }
+
 
         //birden fazla yazar için yorum yapacakarından bu alttaki 2 kodu yazdık
         public ICollection<Heading>  Headings { get; set; }
