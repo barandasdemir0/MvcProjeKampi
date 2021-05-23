@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         public string WriterName { get; set; }//yazar ad
         [StringLength(50)]
         public string WriterSurName { get; set; }//yazar soyad
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterImage { get; set; } //yazar resim
 
         [StringLength(100)]

@@ -17,7 +17,6 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Projects</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -27,7 +26,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Proje İşlemleri</h3>
+                <h3 class="card-title">Başlık İşlemleri</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -87,11 +86,11 @@
                             }
                             if (item.Category.CategoryName == "Film  & sinema")
                             {
-                                color = "badge badge-pill";
+                                color = "badge badge-warning";
                             }
                             if (item.Category.CategoryName == "Dizi & Tv")
                             {
-                                color = "badge badge-light";
+                                color = "badge badge-dark";
                             }
 
                             <tr>
@@ -104,13 +103,13 @@
                                     </a>
                                     <br />
                                     <small>
-                                        @item.HeadingDate
+                                        @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyy"))
                                     </small>
                                 </td>
                                 <td>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <img alt="Avatar" class="table-avatar" src="~/AdminLTE-3.0.4/dist/img/avatar.png">
+                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
                                         </li>
                                     </ul>
                                 </td>
