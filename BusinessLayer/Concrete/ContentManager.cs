@@ -19,13 +19,6 @@ namespace BusinessLayer.Concrete
             _contentdal = contentdal;
         }
 
-        public List<Content> GetListByID(int id)
-        {
-            return _contentdal.List(x => x.HeadingID == id);
-        }
-
-       
-
         void IContentService.ContentAdd(Content content)
         {
             throw new NotImplementedException();
@@ -50,5 +43,10 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
+        public List<Content> GetListByHeadingID(int id)
+        {
+            return _contentdal.List(x => x.HeadingID == id);
+        }
+
     }
 }

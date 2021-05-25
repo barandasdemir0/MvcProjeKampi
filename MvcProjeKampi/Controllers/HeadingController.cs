@@ -56,9 +56,34 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAdd(p);//parametreden gelen değer
             return RedirectToAction("Index");//indexe git
         }
-        public ActionResult ContentByHeading()//içerikleri getir neye göre başlığa göre
+        [HttpGet]
+        public ActionResult EditHeading(int id)//başlığı düzenle
         {
-            return View();
+            List<SelectListItem> valuecategory = (from x in cm.GetList()//getlist ile getirme metodunu verdi
+                                                  select new SelectListItem//yeni bir liste öğesini seçeceğim
+                                                  {
+                                                      Text = x.CategoryName,//category ismini göster bana
+                                                      Value = x.CategoryID.ToString()//categoryıdsını göster
+                                                  }).ToList();//ekleme sayfası yüklendiği zaman bir liste gönderecem listitem ile listeden seçilcek değer bunun ismi valuecategory çünkü categori seçecek LİNQ ile alacak yukarıdaki sorguyu girdik
+            ViewBag.vlc = valuecategory;
+            var HeadingValue = hm.GetByID(id);//ilk önce değerleri getirmemiz lazım getir neye göre getir idye göre getir
+            return View(HeadingValue);
         }
+
+        [HttpPost]
+            public ActionResult EditHeading(Heading p)//başlığı düzenle
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetByID(id);//idye göre bul
+            HeadingValue.HeadingStatus = false;//heading valuenin statusuna false yap
+            hm.HeadingDelete(HeadingValue);//headingvalueden gelen değeri silmeni istiyorum ardından beni indexe yönelt
+            return RedirectToAction("Index");
+             
+        }
+
     }
 }

@@ -35,7 +35,8 @@ namespace BusinessLayer.Concrete
 
         public void HeadingDelete(Heading heading)
         {
-            _headingDal.Delete(heading);
+            // heading.HeadingStatus = false;//status false yap --> sağlıksız işlem
+            _headingDal.Update(heading);
         }
 
         public void HeadingUpdate(Heading heading)

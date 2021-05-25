@@ -19,6 +19,7 @@ namespace EntityLayer.Concrete
         //başlıkla içeriği etkileşimli haletirdik aşşağıdaki 2 kod ile
         public int HeadingID { get; set; }// -->sen benim ilişkili tablomda ıdli değerim olacaksın
         public virtual Heading Heading{ get; set; } // sen headind sınıfından heading adında değer oluştur anahtar olsun buda
+        public bool ContentStatus { get; set; }//true ve false yapmak için yani aktif pasif işlemi
 
         //yorum yapan yazarların  ıdsını aldık
         public int? WriterID { get; set; }

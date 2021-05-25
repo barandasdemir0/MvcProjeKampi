@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
         [StringLength(50)]//senin maksimum uzunluğun 50 olsun hangi propertynin üzerinde tanımlarsak onun kini etkileyecek
         public string HeadingName { get; set; } //veritabanında tanımlayacağımız yer Headingin adı string veri tipinde
         public DateTime HeadingDate { get; set; } //veritabanında tanımlayacağımız yer Headingin tarih bilgisi tarih veri tipinde
+        public bool HeadingStatus { get; set; }//aktif pasif yapmak için ekledik
 
 
 

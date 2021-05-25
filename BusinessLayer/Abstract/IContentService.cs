@@ -10,7 +10,7 @@ namespace BusinessLayer.Abstract
     public interface IContentService
     {
         List<Content> GetList();//category listesini getir yada listeyi getir
-        List<Content> GetListByID(int id);//ıdye göre bana yüm listeyi döndür
+        List<Content> GetListByHeadingID(int id);//ıdye göre bana yüm listeyi döndür
         void ContentAdd(Content content);
         //burada bunu tanımladık Contentmanagerden çağırabilmemiz için burada Content ekle Content sınıfından Content ürettik
         //burada bulma işlemi için gerekli komutları yazacağız aşşağıda
