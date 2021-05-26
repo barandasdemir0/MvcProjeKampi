@@ -6,8 +6,10 @@
 }
 @{
     string color = "";//string color değeri oluşturdum başlangıç değeri sıfır
-    string durum = "";
-    string arkaplan = "";
+    string statusColor = "";
+    string checkStatus = "";
+    string buttonStatusColor = "";
+    string statusName = "";
 
 }
 
@@ -100,15 +102,13 @@
                             }
                             if (item.HeadingStatus == true)
                             {
-                                durum = "Aktif";
-                                arkaplan = "badge badge-success";
+                                statusName = "Aktif";
                             }
-                            else if (item.HeadingStatus == false)
+                            if (item.HeadingStatus == false)
                             {
-                                durum = "Pasif";
-                                arkaplan = "badge badge-danger";
+                                statusName = "Pasif";
                             }
-
+                            @statusName
                             <tr>
                                 <td>
                                     @item.HeadingID
@@ -130,22 +130,18 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    @if (durum == "Pasif")
+                                    @switch (item.HeadingStatus)
                                     {
-
-                                        <a id="sil" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Pasif
-                                        </a>}
-                                    @if (durum == "Aktif")
-                                    {
-                                        <a id="aktif" class="btn btn-success btn-sm">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Aktif
-                                        </a>
+                                        case true:
+                                            statusColor = "badge badge-success";
+                                            buttonStatusColor = "btn btn-danger";
+                                            break;
+                                        case false:
+                                            statusColor = "badge badge-danger";
+                                            buttonStatusColor = "btn btn-success";
+                                            break;
                                     }
+                                    <span class="@statusColor">@item.HeadingStatus</span>
                                 </td>
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
@@ -162,10 +158,20 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
+                                    <a class="@buttonStatusColor btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
                                         <i class="fas fa-trash">
                                         </i>
-                                        Sil
+                                        @if (item.HeadingStatus == false)
+                                        {
+
+                                            checkStatus = "Aktif Yap";
+                                        }
+                                        else
+                                        {
+                                            checkStatus = "Pasif Yap";
+                                        }
+                                        @checkStatus
+
                                     </a>
                                 </td>
                             </tr>
