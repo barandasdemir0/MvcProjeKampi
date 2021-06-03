@@ -1,0 +1,13 @@
+﻿using EntityLayer.Concrete;//message sonucu oluşan kütüphane
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccsessLayer.Abstract
+{
+    public interface IMessageDal : IRepository<Message>
+    {
+    }
+}

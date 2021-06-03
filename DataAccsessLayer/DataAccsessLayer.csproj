@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202105191456578_mig_writertitle_add.cs" />
     <Compile Include="Migrations\202105191456578_mig_writertitle_add.designer.cs">
@@ -87,6 +89,10 @@
     <Compile Include="Migrations\202105252047333_mig_headingstatusadd.cs" />
     <Compile Include="Migrations\202105252047333_mig_headingstatusadd.designer.cs">
       <DependentUpon>202105252047333_mig_headingstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106030953013_mig_add_message_class.cs" />
+    <Compile Include="Migrations\202106030953013_mig_add_message_class.designer.cs">
+      <DependentUpon>202106030953013_mig_add_message_class.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105252047333_mig_headingstatusadd.resx">
       <DependentUpon>202105252047333_mig_headingstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106030953013_mig_add_message_class.resx">
+      <DependentUpon>202106030953013_mig_add_message_class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

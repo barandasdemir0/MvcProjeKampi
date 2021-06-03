@@ -13,7 +13,7 @@ namespace BusinessLayer.Abstract
         void AboutAdd(About about);
         //burada bunu tanımladık Aboutmanagerden çağırabilmemiz için burada About ekle About sınıfından About ürettik
         //burada bulma işlemi için gerekli komutları yazacağız aşşağıda
-        About GetByID(int id);//About adında getbyıd isminde isim yazdık sen bir id alacaksın yani id ye göre işlem alacağmızı buraya yazdık genericde ise single for demiştik ya işte orada buna göre işlem yapacak
+        About GetByID(int id);//About adında getbyıd isminde isim yazdık sen bir id alacaksın yani id ye göre işlem alacağmızı buraya yazdık 
         void AboutDelete(About about);//void türünde Aboutdelete adında ismin de bir metot About sınıfından About parametresi alacaksın
         void AboutUpdate(About about);////void türünde AboutUpdate adında ismin de bir metot About sınıfından About parametresi alacaksın    
     }
