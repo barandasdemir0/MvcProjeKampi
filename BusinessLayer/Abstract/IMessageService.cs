@@ -9,7 +9,8 @@ namespace BusinessLayer.Abstract
 {
     interface IMessageService
     {
-        List<Message> GetList();//Message listesini getir yada listeyi getir
+        List<Message> GetListInbox();//Message listesini getir yada listeyi getir
+        List<Message> GetListSendbox();//Gönderilen Message listesini getir 
         void MessageAdd(Message message);
         //burada bunu tanımladık Messagemanagerden çağırabilmemiz için burada Message ekle category sınıfından Message ürettik
         //burada bulma işlemi için gerekli komutları yazacağız aşşağıda
