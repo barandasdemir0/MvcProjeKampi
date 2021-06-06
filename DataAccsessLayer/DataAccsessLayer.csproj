@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
+    <Compile Include="EntityFramework\ImageFileDal.cs" />
     <Compile Include="Migrations\202105191456578_mig_writertitle_add.cs" />
     <Compile Include="Migrations\202105191456578_mig_writertitle_add.designer.cs">
       <DependentUpon>202105191456578_mig_writertitle_add.cs</DependentUpon>
@@ -97,6 +99,10 @@
     <Compile Include="Migrations\202106061349163_mig_contactadd_date.cs" />
     <Compile Include="Migrations\202106061349163_mig_contactadd_date.designer.cs">
       <DependentUpon>202106061349163_mig_contactadd_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106061614202_mig_addimage_file.cs" />
+    <Compile Include="Migrations\202106061614202_mig_addimage_file.designer.cs">
+      <DependentUpon>202106061614202_mig_addimage_file.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106061349163_mig_contactadd_date.resx">
       <DependentUpon>202106061349163_mig_contactadd_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106061614202_mig_addimage_file.resx">
+      <DependentUpon>202106061614202_mig_addimage_file.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

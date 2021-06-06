@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\DenemeController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -310,6 +311,38 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\images\1.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\2.png" />
+    <Content Include="AdminLTE-3.0.4\images\3.png" />
+    <Content Include="AdminLTE-3.0.4\images\53fecbac6715768e2ba3b61194994ec9.png" />
+    <Content Include="AdminLTE-3.0.4\images\6.png" />
+    <Content Include="AdminLTE-3.0.4\images\6159e09ccc582429a5aececb13507e7e.png" />
+    <Content Include="AdminLTE-3.0.4\images\6cqqukha0im51.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\ad091cd64b66a16a16476b2e1e1ba533.png" />
+    <Content Include="AdminLTE-3.0.4\images\b0c6781d820c885feba11d3a081e0572.png" />
+    <Content Include="AdminLTE-3.0.4\images\bg.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\black_hole.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\Citadel_ama_HL3_NERDE.png" />
+    <Content Include="AdminLTE-3.0.4\images\dab17991bf288eea98e8e084d65700d3.png" />
+    <Content Include="AdminLTE-3.0.4\images\e6f92b7f61aad9d0da811a48c02658a9.png" />
+    <Content Include="AdminLTE-3.0.4\images\earth_cloud.png" />
+    <Content Include="AdminLTE-3.0.4\images\ed1ebbba38820c18027d7a6b2bd9c5f3.png" />
+    <Content Include="AdminLTE-3.0.4\images\eye_of_god.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\EYYcLwBWoAA2Xj0.png" />
+    <Content Include="AdminLTE-3.0.4\images\indir.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\mac-os-catalina-evening-4k-92.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\macos-big-sur-wallpaper-1920x1080_897485-mm-90.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\macos-catalina-mountains-island-morning-stock-5k-1920x1080-4015.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\macos-mojave-evening-mode-stock-l9-1920x1080.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\okeanos.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\photo_2021-05-03_03-56-asd.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\spin.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\supernova_2-1920x1080.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\Til_this_pendulum_finds_equilibrium.png" />
+    <Content Include="AdminLTE-3.0.4\images\wallpaperbetter.com_1920x1080.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\wallpapersden.com_macos-catalina-mountains_1920x1080.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\wlNtbOk4pEibBYgcWCjEgw.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\ZAMANYA_STANBUL_OLD_1920x1200.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2308,6 +2341,7 @@
     <Content Include="Views\Message\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendBoxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
