@@ -2300,6 +2300,8 @@
     <Content Include="Views\Message\Inbox.cshtml" />
     <Content Include="Views\Message\Sendbox.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
+    <Content Include="Views\Message\GetInBoxMessageDetails.cshtml" />
+    <Content Include="Views\Message\GetSendBoxMessageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

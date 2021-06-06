@@ -81,13 +81,13 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Contact/GetContactDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@item.MessageID">@item.ReceiverMail</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetSendBoxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetSendBoxMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> - @item.MessageContent.Substring(0, 10)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 Dakika Önce</td>
+                                            <td class="mailbox-date">  @(((DateTime)item.MessageDate).ToString("dd-MMM-yyy"))</td>
                                         </tr>
                                     }
                                 </tbody>
