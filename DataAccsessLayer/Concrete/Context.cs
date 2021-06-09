@@ -18,5 +18,6 @@ namespace DataAccsessLayer.Concrete
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Message> Messages { get; set; }//eğer bunu eklemeden migrations işlemi yaparsak boş döndürür ve böylelikle veritabanınıa yansımaz
         public DbSet<ImageFile> ımageFiles { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }
