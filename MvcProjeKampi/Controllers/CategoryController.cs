@@ -15,8 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Category
         CategoryManager cm = new CategoryManager(new EfCategoryDal());//businesslayerdaki categorymanagerı çağırdık
-        //ama new efcategorydal diyerek parametremizi aldık nerden gelen category managerdeaki
-
+        //ama new efcategorydal diyerek parametremizi aldık nerden gelen category managerdeaki  
         public ActionResult Index()
         {
             return View();
