@@ -15,7 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: AdminCategory
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
-        [Authorize]//bu ile sadece index sayfasına giriş yapan kişiler görecek
+        [Authorize (Roles = "B")]//bu ile sadece index sayfasına giriş yapan kişiler görecek ve roles diyerek sadece b rolüne sahip olan kişiler bunu görecek
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();
